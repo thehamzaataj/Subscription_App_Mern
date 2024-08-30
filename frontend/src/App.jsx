@@ -7,7 +7,7 @@ const stripePromise = loadStripe('pk_test_51PIDkmAmRjLguYXEQDqNDPDnOei1uubOLW6Rk
 const App = () => {
   const handleCheckout = async (plan) => {
     try {
-      const { data } = await axios.post('http://localhost:5000/api/subscriptions/create-checkout-session', { plan });
+      const { data } = await axios.post('https://subscription-app-mern.vercel.app/api/subscriptions/create-checkout-session', { plan });
       const stripe = await stripePromise;
       await stripe.redirectToCheckout({ sessionId: data.id });
     } catch (error) {
