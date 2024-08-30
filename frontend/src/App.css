@@ -1,0 +1,14 @@
+body{
+  background: black;
+  color: white;
+}
+.main{
+  text-align: center;
+}
+.qw{
+  padding: 10px;
+}
+.qw:hover{
+  padding: 12px;
+}
+
